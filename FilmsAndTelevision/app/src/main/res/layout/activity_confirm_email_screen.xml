@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ConfirmEmailScreen">
+
+    <TextView
+        android:id="@+id/ConfirmView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Confirm Your Email"
+        android:textSize="@dimen/font_large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/PreEmailView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ConfirmView"
+        android:text="A confirmation email has been sent to the address:"
+        android:textSize="@dimen/font_medium" />
+
+    <TextView
+        android:id="@+id/EmailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PreEmailView"
+        android:hint="Email Address" />
+
+    <TextView
+        android:id="@+id/PinView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/PinEdit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PinEdit"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="Enter PIN:"
+        android:textSize="@dimen/font_medium" />
+
+    <EditText
+        android:id="@+id/PinEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_large"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/EmailView"
+        app:layout_constraintLeft_toRightOf="@id/PinView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="@dimen/font_medium"
+        android:hint="PIN code" />
+
+    <Button
+        android:id="@+id/ConfirmButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/padding_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PinEdit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Confirm Email"
+        android:textSize="@dimen/font_medium"
+        android:onClick="gotoLogIn" />
+
+</android.support.constraint.ConstraintLayout>

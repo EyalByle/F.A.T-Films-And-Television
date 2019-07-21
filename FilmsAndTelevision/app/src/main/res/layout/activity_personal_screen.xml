@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PersonalScreen" >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/UserBaseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/UsernameTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_small"
+            app:layout_constraintTop_toBottomOf="@id/UsernameTitleView"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <ListView
+                android:id="@+id/AllButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="@dimen/padding_tiny"
+                android:divider="@android:color/transparent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ListsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ExistingUserListsOption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/UserListsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginLeft="@dimen/padding_tiny"
+                android:layout_marginRight="@dimen/padding_tiny"
+                android:text="@string/personal_screen_view_list"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ListView
+                android:id="@+id/UserPersonalLists"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:layout_marginTop="@dimen/padding_small"
+                app:layout_constraintBottom_toTopOf="@id/ButtonsLayout"
+                app:layout_constraintTop_toBottomOf="@id/UserListsTitle"
+                android:divider="@android:color/background_dark"
+                android:dividerHeight="@dimen/padding_tiny" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ButtonsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/StateViewButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/DeleteListsButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:background="@color/Red"
+                        android:onClick="deleteLists"
+                        android:text="@string/personal_screen_delete_off"
+                        app:layout_constraintRight_toLeftOf="@id/GoBackButton"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/GoBackButton" />
+
+                    <Button
+                        android:id="@+id/GoBackButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_small"
+                        android:layout_marginRight="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/padding_tiny"
+                        android:background="@color/DarkGray"
+                        android:onClick="toggleLists"
+                        android:text="Cancel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/AddListsButton"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@id/DeleteListsButton" />
+
+                    <Button
+                        android:id="@+id/AddListsButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:layout_marginLeft="@dimen/padding_tiny"
+                        android:background="@color/DarkGreen"
+                        android:onClick="showListAddDialog"
+                        android:text="@string/personal_screen_create"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@id/GoBackButton"
+                        app:layout_constraintTop_toTopOf="@id/GoBackButton" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/StateDeleteButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:id="@+id/ConfirmDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:background="@color/DarkGreen"
+                        android:onClick="deleteLists"
+                        android:text="@string/personal_screen_delete_on"
+                        app:layout_constraintRight_toLeftOf="@id/CancelDeleteButton"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/CancelDeleteButton" />
+
+                    <Button
+                        android:id="@+id/CancelDeleteButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_small"
+                        android:layout_marginRight="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/padding_tiny"
+                        android:background="@color/DarkGray"
+                        android:onClick="cancelDelete"
+                        android:text="Cancel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@id/ConfirmDelete" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/EmptyUserListsOption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/NoneFoundView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="No lists exist (you can create lists in the personal screen)"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_large" />
+
+            <Button
+                android:id="@+id/AddListsButton2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:gravity="center"
+                android:background="@color/DarkGreen"
+                android:onClick="showListAddDialog"
+                android:text="@string/personal_screen_create"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NoneFoundView"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

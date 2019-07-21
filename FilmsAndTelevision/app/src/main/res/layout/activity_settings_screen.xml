@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small"
+    tools:context=".activities.SettingsScreen">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/SettingsWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/SettingsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/NameChangeButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Settings"
+            android:textSize="@dimen/font_huge"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/NameChangeButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_tiny"
+            app:layout_constraintTop_toBottomOf="@id/SettingsTitle"
+            app:layout_constraintBottom_toTopOf="@id/PasswordChangeButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Press to change your name"
+            android:textSize="@dimen/font_medium"
+            android:tag="@id/TopScreenName"/>
+
+        <Button
+            android:id="@+id/PasswordChangeButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_tiny"
+            app:layout_constraintTop_toBottomOf="@id/NameChangeButton"
+            app:layout_constraintBottom_toTopOf="@id/PreferredLanguageChangeButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Press to change your password"
+            android:textSize="@dimen/font_medium" />
+
+        <Button
+            android:id="@+id/PreferredLanguageChangeButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_tiny"
+            android:layout_marginBottom="@dimen/padding_small"
+            app:layout_constraintTop_toBottomOf="@id/PasswordChangeButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Press to choose your default languages"
+            android:textSize="@dimen/font_medium" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ConfirmationWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--name change on top part of screen-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/TopScreenName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/Guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/NewNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/NewNameEdit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Update your username below"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/NewNameEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:ems="10"
+                android:hint="New name goes here"
+                android:inputType="text"
+                android:textSize="@dimen/font_medium"
+                android:maxLength="20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NewNameTitle" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!--Password edit on top part of screen-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/TopScreenPassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/Guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/PasswordChangeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/PasswordWrapper1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Change your password below"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/PasswordWrapper1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/PasswordChangeTitle"
+                app:layout_constraintBottom_toTopOf="@id/PasswordWrapper2">
+
+                <TextView
+                    android:id="@+id/PasswordView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/PasswordEdit"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/PasswordEdit"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:text="Password"
+                    android:textSize="@dimen/font_medium" />
+
+                <EditText
+                    android:id="@+id/PasswordEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toRightOf="@id/PasswordView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_weight="1.5"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Your new password"
+                    android:textSize="@dimen/font_medium" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/PasswordWrapper2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/PasswordWrapper1"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/ConfirmPasswordView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/ConfirmPasswordEdit"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/ConfirmPasswordEdit"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:text="Confirm your password"
+                    android:textSize="@dimen/font_medium" />
+
+                <EditText
+                    android:id="@+id/ConfirmPasswordEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toRightOf="@id/ConfirmPasswordView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_weight="1.5"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Same password"
+                    android:textSize="@dimen/font_medium" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!--Preferred languages top screen-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/PreferredLanguagesScreen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/PreferredLanguagesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/PreferencesWrapper"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Pick your default languages"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/PreferencesWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/PreferredLanguagesTitle"
+                app:layout_constraintBottom_toBottomOf="@id/ButtonsWrapper">
+
+                <LinearLayout
+                    android:id="@+id/PreferencesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ButtonsWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                app:layout_constraintTop_toBottomOf="@id/PreferencesWrapper"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/CancelLanguagesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/ConfirmLanguagesButton"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:text="Cancel"
+                    android:textSize="@dimen/font_medium"/>
+
+                <Button
+                    android:id="@+id/ConfirmLanguagesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_tiny"
+                    app:layout_constraintLeft_toRightOf="@id/CancelLanguagesButton"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:text="Confirm"
+                    android:textSize="@dimen/font_medium"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/Guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <!--Confirmation bottom screen-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/BottomScreen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/padding_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Guideline"
+            android:visibility="invisible">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ConfirmPasswordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/ApplyButton"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/BottomScreenPasswordView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_tiny"
+                    android:text="Password:"
+                    android:textSize="@dimen/font_medium"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/BottomScreenPasswordEdit"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/BottomScreenPasswordEdit" />
+
+                <EditText
+                    android:id="@+id/BottomScreenPasswordEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_tiny"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="Enter current password"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/font_medium"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintLeft_toRightOf="@id/BottomScreenPasswordView"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/CancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_tiny"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ConfirmPasswordWrapper"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ApplyButton"
+                android:text="Cancel"
+                android:textSize="@dimen/font_large"/>
+
+            <Button
+                android:id="@+id/ApplyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_tiny"
+                app:layout_constraintTop_toTopOf="@id/CancelButton"
+                app:layout_constraintBottom_toBottomOf="@id/CancelButton"
+                app:layout_constraintLeft_toRightOf="@id/CancelButton"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Apply"
+                android:textSize="@dimen/font_large" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

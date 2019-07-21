@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="TitleBookmarksAdd" format="reference"/>
+    <attr name="TitleBookmarksRemove" format="reference"/>
+    <attr name="TitleListsButton" format="reference"/>
+    <attr name="TitleTrailerButton" format="reference"/>
+    <attr name="TitleWatchNowStateAvailable" format="reference"/>
+    <attr name="TitleWatchNowStateRequest" format="reference"/>
+    <attr name="TitleWatchNowStateRequested" format="reference"/>
+    <attr name="TitleRatingTextColour" format="reference"/>
+    <attr name="DialogStyle" format="reference"/>
+    <attr name="SpinnerBackground" format="reference"/>
+</resources>

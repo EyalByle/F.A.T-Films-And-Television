@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/padding_small"
+    android:paddingStart="@dimen/padding_small" >
+
+    <CheckBox
+        android:id="@+id/ItemCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/ItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ItemCheck"
+        android:layout_toEndOf="@id/ItemCheck"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:text="List name"
+        android:textSize="@dimen/font_medium"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="short_name">F.A.T</string>
+    <string name="app_name">Films And Television</string>
+    <string name="title_prompt">Type of the title</string>
+    <string name="custom_description">Media Controls</string>
+
+    <string-array name="title_options">
+        <item>Movie</item>
+        <item>Series</item>
+    </string-array>
+
+    <string name="theme_prompt">Pick a theme</string>
+    <string-array name="theme_options">
+        <item>Light theme</item>
+        <item>Dark theme</item>
+    </string-array>
+
+    <string name="language_prompt">Languages</string>
+    <string-array name="languages">
+        <item>None</item>
+        <item>English</item>
+        <item>Hebrew</item>
+        <item>Spanish</item>
+        <item>Chinese</item>
+        <item>Portuguese</item>
+    </string-array>
+
+    <string name="bookmarks_button_text_add">Add To Bookmarks</string>
+    <string name="bookmarks_button_text_remove">Remove From Bookmarks</string>
+
+    <string name="watch_now_button_text_can_watch">Watch now!</string>
+    <string name="watch_now_button_text_request">Request to watch</string>
+    <string name="watch_now_button_text_requested">Requested to watch</string>
+
+    <string name="personal_screen_view_list">Choose the list you wish to view</string>
+    <string name="personal_screen_delete_list">Mark the lists you wish to delete</string>
+    <string name="personal_screen_delete_off">Delete a list</string>
+    <string name="personal_screen_delete_on">Confirm</string>
+    <string name="personal_screen_create">Create a list</string>
+
+    <string name="personal_screen_title">Welcome,</string>
+    <string name="title_activity_settings">SettingsScreen</string>
+
+</resources>

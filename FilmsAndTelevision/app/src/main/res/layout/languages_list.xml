@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/PreferredWrapper1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/PreferredLanguageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_tiny"
+        android:textSize="@dimen/font_medium"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/SpinnerWrapper"/>
+
+    <FrameLayout
+        android:id="@+id/SpinnerWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintLeft_toRightOf="@id/PreferredLanguageText"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="?attr/SpinnerBackground" >
+
+        <Spinner
+            android:id="@+id/LanguagesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/languages"
+            android:prompt="@string/language_prompt"
+            android:textSize="@dimen/font_medium" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

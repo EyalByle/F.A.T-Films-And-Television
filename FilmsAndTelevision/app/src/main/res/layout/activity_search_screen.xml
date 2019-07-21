@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SearchScreen">
+
+    <TextView
+        android:id="@+id/SearchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Search anything"
+        android:textSize="@dimen/font_large"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/SearchEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Search terms"
+        android:textSize="@dimen/font_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchTitle" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchEdit"
+        android:text="Title Search"
+        android:textSize="@dimen/font_large"
+        android:onClick="gotoTitleList" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ButtonsWrapper1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/SearchButton">
+
+        <Button
+            android:id="@+id/TopRatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_tiny"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BottomRatedButton"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Top rated titles"
+            android:textSize="@dimen/font_medium"
+            android:onClick="gotoTopRatedList" />
+
+        <Button
+            android:id="@+id/BottomRatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_tiny"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/TopRatedButton"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Bottom rated titles"
+            android:textSize="@dimen/font_medium"
+            android:onClick="gotoBottomRatedList" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ButtonsWrapper2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/ButtonsWrapper1">
+
+        <Button
+            android:id="@+id/AddTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_tiny"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/GetStreamsButton"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Add a new title"
+            android:textSize="@dimen/font_medium"
+            android:onClick="gotoAddTitle" />
+
+        <Button
+            android:id="@+id/GetStreamsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_tiny"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/AddTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Streams"
+            android:textSize="@dimen/font_medium"
+            android:onClick="gotoStreams" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

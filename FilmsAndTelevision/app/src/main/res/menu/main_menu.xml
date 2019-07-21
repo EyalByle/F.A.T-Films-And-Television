@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/SearchItem"
+        android:title="Search" />
+    <item
+        android:id="@+id/PrivateItem"
+        android:title="Private" />
+    <item
+        android:id="@+id/SettingsItem"
+        android:title="Settings" />
+    <!--item
+        android:id="@+id/StatsItem"
+        android:title="Stats" /-->
+    <item
+        android:id="@+id/LogOffItem"
+        android:title="Log Off" />
+</menu>

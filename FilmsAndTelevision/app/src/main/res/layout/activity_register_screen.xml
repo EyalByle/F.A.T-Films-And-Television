@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterScreen">
+
+    <TextView
+        android:id="@+id/RegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Register"
+        android:textSize="@dimen/font_large"
+        android:textStyle="bold" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/RegisterTitle" >
+        <TextView
+            android:id="@+id/NicknameView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/NicknameEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/NicknameEdit"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Nickname"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/NicknameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/NicknameView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Your nickname"
+            android:textSize="@dimen/font_medium" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/Field1" >
+
+        <TextView
+            android:id="@+id/EmailView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/EmailEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/EmailEdit"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Email"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/EmailEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/EmailView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Existing email"
+            android:textSize="@dimen/font_medium" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/Field2" >
+
+        <TextView
+            android:id="@+id/ConfirmEmailView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ConfirmEmailEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ConfirmEmailEdit"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Confirm Email"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/ConfirmEmailEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/ConfirmEmailView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Same email"
+            android:textSize="@dimen/font_medium" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/Field3" >
+
+        <TextView
+            android:id="@+id/PasswordView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/PasswordEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/PasswordEdit"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Password"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/PasswordEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/PasswordView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Your password"
+            android:textSize="@dimen/font_medium" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/Field4" >
+
+        <TextView
+            android:id="@+id/ConfirmPasswordView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:text="Confirm Password"
+            android:textSize="@dimen/font_medium"
+            app:layout_constraintRight_toLeftOf="@id/ConfirmPasswordEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ConfirmPasswordEdit"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <EditText
+            android:id="@+id/ConfirmPasswordEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/ConfirmPasswordView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Password again"
+            android:textSize="@dimen/font_medium" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Field6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/Field5" >
+
+        <TextView
+            android:id="@+id/BirthDateView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BirthDateEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/BirthDateEdit"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Birth Date"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/BirthDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            app:layout_constraintLeft_toRightOf="@id/BirthDateView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1.5"
+            android:ems="10"
+            android:maxLength="10"
+            android:inputType="date"
+            android:hint="YYYY-MM-DD" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/Field6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Confirm Registration"
+        android:textSize="@dimen/font_large"
+        android:textStyle="bold"
+        android:onClick="gotoEmailConfirm" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,11 @@
+From: %s
+To: {}
+Subject: Confirm your Email
+
+Please confirm your email for the app "Films And Television".
+
+Your confirmation code is:
+
+            {}
+
+Please do not reply to this message.

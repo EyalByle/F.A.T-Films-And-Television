@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.FilmsAndTelevision">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fat_icon2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/fat_icon2"
+        android:supportsRtl="true"
+        android:theme="@style/DarkTheme">
+        <activity android:name=".activities.LogInScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.RegisterScreen" />
+        <activity android:name=".activities.SearchScreen" />
+        <activity android:name=".activities.ConfirmEmailScreen" />
+        <activity android:name=".activities.AddTitleScreen" />
+        <activity android:name=".activities.TitleScreen" />
+        <activity android:name=".activities.TitleListScreen" />
+        <activity android:name=".activities.CrewScreen" />
+        <activity
+            android:name=".activities.PersonalScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ViewRatingScreen" />
+        <activity
+            android:name=".activities.StreamScreen"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activities.SettingsScreen" />
+        <activity android:name=".activities.EpisodeSelectScreen"></activity>
+    </application>
+
+</manifest>

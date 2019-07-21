@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="LightTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/Black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/White</item>
+        <item name="android:windowBackground">@color/White</item>
+        <item name="DialogStyle">@style/AlertDialogStyle</item>
+        <item name="SpinnerBackground">@color/White</item>
+
+        <item name="TitleBookmarksAdd">@color/DarkGreen</item>
+        <item name="TitleBookmarksRemove">@color/Red</item>
+        <item name="TitleListsButton">@color/Orange</item>
+        <item name="TitleTrailerButton">@color/Lime</item>
+        <item name="TitleWatchNowStateAvailable">@color/DarkGreen</item>
+        <item name="TitleWatchNowStateRequest">@color/Yellow</item>
+        <item name="TitleWatchNowStateRequested">@color/LightBlue</item>
+        <item name="TitleRatingTextColour">@color/Black</item>
+    </style>
+
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:colorBackground">@color/BlackMatte</item>
+
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textColorHint">@color/LightGray</item>
+        <item name="editTextColor">@color/White</item>
+        <item name="android:editTextColor">@color/White</item>
+        <item name="android:textColorSecondary">@color/White</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/White</item>
+
+        <item name="android:buttonTint">@color/White</item>
+        <item name="colorButtonNormal">@color/Black</item>
+        <item name="android:divider">@color/BlackMatte</item>
+        <item name="android:itemBackground">@color/BlackMatte</item>
+        <item name="spinnerStyle">@style/SpinnerDarkStyle</item>
+        <item name="DialogStyle">@style/AlertDialogDarkStyle</item>
+        <item name="SpinnerBackground">@color/Black</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+        <item name="TitleBookmarksAdd">@color/green1</item>
+        <item name="TitleBookmarksRemove">@color/red1</item>
+        <item name="TitleListsButton">@color/Orange</item>
+        <item name="TitleTrailerButton">@color/Lime</item>
+        <item name="TitleWatchNowStateAvailable">@color/yellow1</item>
+        <item name="TitleWatchNowStateRequest">@color/orange1</item>
+        <item name="TitleWatchNowStateRequested">@color/LightBlue</item>
+        <item name="TitleRatingTextColour">@color/LightYellow</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert" >
+        <item name="android:textColor">@color/BlackMatte</item>
+        <item name="android:background">@color/White</item>
+    </style>
+
+    <style name="AlertDialogDarkStyle" parent="Theme.AppCompat.Dialog.Alert" >
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@color/Black</item>
+        <!--<item name="android:background">@color/Black</item>-->
+    </style>
+
+    <style name="SpinnerDarkStyle" parent="Base.Widget.AppCompat.Spinner" >
+        <item name="android:popupBackground">@color/BlackMatte</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:paddingTop">@dimen/padding_tiny</item>
+        <item name="android:paddingBottom">@dimen/padding_tiny</item>
+    </style>
+
+</resources>
