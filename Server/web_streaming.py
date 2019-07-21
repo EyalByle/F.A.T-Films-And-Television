@@ -104,7 +104,7 @@ class Stream:
 
                         show[s] = list(map(str, sorted(map(int, show[s]))))
                     Stream.shows_dict[title_path] = show
-        # print(Stream.Files_dict)
+        print("Done: ", folder)
 
     @staticmethod
     def set_files():

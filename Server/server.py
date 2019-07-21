@@ -69,6 +69,9 @@ class Server:
 
             with open("mail_format.txt") as f:
                 Server.email_body_template = f.read() % self.email_address
+        except smtplib.SMTPAuthenticationError: # Non-existing gmail account
+            print("Wrong email or password")
+            exit(-2)
         except Exception as msg:
             print("Exception: ", msg)
             exit(-999)

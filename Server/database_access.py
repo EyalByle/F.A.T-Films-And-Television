@@ -40,10 +40,8 @@ class Database:
         :returns: email and a password
         """
         try:
-            print(list(self.cursor.execute("""SELECT email, password
-                       FROM Users WHERE id=0""")))
-            email, password = list(self.cursor.execute("""SELECT email, password
-            FROM Users WHERE id=0"""))[0]
+            email, password = list(self.cursor.execute("""SELECT
+            email, password FROM Users WHERE id=0"""))[0]
         except IndexError:
             return None, None
         return email, password
